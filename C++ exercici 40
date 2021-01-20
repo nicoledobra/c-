@@ -1,1 +1,10 @@
-
+#include <iostream>
+using namespace std;
+int main(){
+int a, b, c, d;
+cin >> a >> b;
+c=a*3>=10;
+d=b/4<5;
+cout << "Results of the comparisons are " << c << " and " << d;
+return 0;
+}
