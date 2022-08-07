@@ -1,0 +1,4 @@
+Per què serveix la llibreria bàsica de C++ iostream?
+
+R: És una biblioteca orientada a objectes que proporciona funcionalitats d'entrada i sortida mitjançant fluxos
+es la biblioteca estándar en C++ para poder tener acceso a los dispositivos estándar de entrada y/o salida
