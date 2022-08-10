@@ -1,0 +1,17 @@
+Quin dels següents fragments de codi retornaria error en el moment de compilar-lo perquè conté errors sintàctics? És a dir, conté quelcom que està mal escrit?
+
+R:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    unsgined int a;
+    
+    singed int b;
+    
+    unsinged long double c;
+    
+    return 0;
+}
