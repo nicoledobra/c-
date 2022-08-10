@@ -1,0 +1,19 @@
+Quin dels següents fragments de codi retornaria error en el moment de compilar-lo perquè conté errors sintàctics? És a dir, conté quelcom que està mal escrit?
+
+R:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    unsigned long int numero;
+    
+    signed long int numero2;
+    
+    unsigned short int numero3
+    
+    signed int numero4;
+    
+    return 0;
+}
