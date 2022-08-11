@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int a;
+  bool b = true;
+  //"I am another comment.
+}
