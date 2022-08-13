@@ -1,0 +1,14 @@
+Quin és el resultat que emmagatzema la variable x després de realitzar el següent codi
+
+#include <iostream>
+                                                            
+using namespace std;
+                                                  
+int main()                                                           
+{                                                  
+    int x;                                 
+    x = (int)(2.14 + 3.28);                                               
+    return 0;                                                            
+}
+
+R: 5
