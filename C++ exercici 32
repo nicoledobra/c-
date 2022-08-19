@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  char Missatge[] = "Hello how are you"; 
+  cout << Missatge;
+  return 0;
+}
+
+r: Hello how are you
