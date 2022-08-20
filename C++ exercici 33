@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int resultat; 
+  cout << "How many fingers do you have in your right hand?";
+ 
+  cin >> resultat;
+  cout << "In the right hand you have " << resultat << " fingers.";
+  return 0;
+}
+
+R: In the right hand you have 10 fingers.
