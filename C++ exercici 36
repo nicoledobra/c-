@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  float a, b;
+  float resultat;
+  cin >> a;
+  cin >> b;
+  resultat = a+b;
+  cout << "The result of adding the two given numbers is " << resultat;
+  return 0;
+}
