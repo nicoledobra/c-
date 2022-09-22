@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, quocient, residu;
+    cin >> a;
+    cin >> b;
+    quocient=a/b;
+    residu=a%b;
+    cout << "The division ratio of the two given numbers is " << quocient << " and its remainder is " << residu;
+    return 0;
+}
