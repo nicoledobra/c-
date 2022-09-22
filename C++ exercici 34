@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+float resultat;
+cout << "What is the value of number pi?";
+cin >> resultat;
+cout << "Your given number pi has a value of " << resultat << " but as an integer it is " << int(resultat);
+return 0;
+}
