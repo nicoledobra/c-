@@ -7,7 +7,7 @@ int main()
     int a, b, c;
     cin >> a;
     cin >> b;
-    c=a*3>=10 && b/4<5;
+    c=a*3>=10 or b/4<5;
     cout << "Results of the comparisons are " << c;
     return 0;
 }
