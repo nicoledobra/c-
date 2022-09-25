@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b;
+    cin >> a;
+    cin >> b;
+    if(a>b && a*3>b*2){
+    cout << "Condition is fulfilled";}
+    else{
+        cout << "Condition is not fulfilled";}
+    return 0;
+}
