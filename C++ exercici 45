@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a;
+    cin >> a;
+    switch(a){
+        case 1:
+            cout << "It is 1";
+            break;
+        case 2:
+            cout << "It is 2";
+            break;
+        case 3:
+            cout << "It is 3";
+            break;
+        default:
+            cout << "I do not know what it is";
+    }
+    return 0;
+}
