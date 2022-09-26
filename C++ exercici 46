@@ -7,7 +7,7 @@ int main()
     int a, residu;
     cin >> a;
     residu=a%2;
-    switch(a){
+    switch(a%2){
         case 0:
             cout << "You have given an even number";
             break;
