@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, residu;
+    cin >> a;
+    residu=a%2;
+    switch(a){
+        case 0:
+            cout << "You have given an even number";
+            break;
+        case 1:
+            cout << "You have given an odd number";
+            break;
+        default:
+            cout << "I do not know what you have given";
+    }
+    return 0;
+}
