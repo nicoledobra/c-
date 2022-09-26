@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int index, fita;
+    cin >> fita;
+    index=2;
+    while(index <= fita){
+    cout << "\n" <<index;
+    index=index + 2;
+    }
+    return 0;
+}
+
+#include <iostream>
+int main()
+{
+    int index, fita;
+    cin >> fita;
+    index=2;
+    while(index <= fita){
+    cout << index << endl;
+    index=index + 2;
+    }
+    return 0;
+}
+
+R: para 12
+2
+4
+6
+8
+10
