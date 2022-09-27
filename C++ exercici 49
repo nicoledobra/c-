@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 0;
+    int i=3;
+    for(int m=1; m<10; m = m + 1){
+    cout << "\n" << i*m;
+    }
+    return 0;
+}
+
+R:
+
+3
+6
+9
+12
+15
+18
+21
+24
+27
