@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+string simplifyNumber(string s);
+int main()
+{
+    int a, b;
+    string total;
+    cin >> a;
+    cin >> b;
+    total=simplifyNumber(to_string(a*b));
+    while(total.length()>1)
+    {
+        total=simplifyNumber(total);
+    }
+    cout << "The simplification of the multiplication between " << a << " and " << b << " is " << total;
+    return 0;
+}
+string simplifyNumber(string s)
+{
+    int total=0;
+    int i=0;
+    string t;
+    if(s.length()==0)
+    {
+        return "0";
+    }
+    else if(s.length()==1)
+    {
+        return s;
+    }
+    else
+    {
+        while(i<s.length())
+        {
+            total=total+(s[i]-'0');
+            i ++;
+        }
+        return to_string(total);
+    }
+}
