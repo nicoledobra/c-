@@ -1,0 +1,27 @@
+#include <iostream>
+
+int countMultiples(int a, int b, int k) {
+    int count = 0;
+    for (int i = a; i <= b; i++) {
+        if (i % k == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int a, b, k;
+    std::cin >> a >> b >> k;
+    
+    int result = countMultiples(a, b, k);
+    std::cout << result << std::endl;
+    
+    return 0;
+}
+
+R:
+0
+5
+1
+6
