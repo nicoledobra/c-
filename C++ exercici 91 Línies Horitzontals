@@ -1,0 +1,101 @@
+1)
+#include <iostream>
+#include <vector>
+#include <string>
+
+int countHorizontalLines(const std::vector<std::string>& rectangle) {
+    int count = 0;
+    
+    for (int i = 0; i < rectangle.size(); i++) {
+        int j = 0;
+        while (j < rectangle[i].size()) {
+            if (rectangle[i][j] == '-') {
+                // Encontramos un guion, buscamos el final de la línea horizontal
+                int lineEnd = j + 1;
+                while (lineEnd < rectangle[i].size() && rectangle[i][lineEnd] == '-') {
+                    lineEnd++;
+                }
+                
+                // Verificamos si la línea horizontal tiene al menos dos guiones consecutivos
+                if (lineEnd - j >= 2) {
+                    count++;
+                }
+                
+                j = lineEnd; // Avanzamos a la siguiente posición después de la línea horizontal
+            }
+            else {
+                j++;
+            }
+        }
+    }
+    
+    return count;
+}
+
+int main() {
+    int n, m;
+    std::cin >> n >> m;
+    
+    std::vector<std::string> rectangle(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> rectangle[i];
+    }
+    
+    int result = countHorizontalLines(rectangle);
+    std::cout << result << std::endl;
+    
+    return 0;
+}
+
+2)
+#include <iostream>
+#include <vector>
+#include <string>
+
+int countHorizontalLines(const std::vector<std::string>& rectangle) {
+    int count = 0;
+    
+    for (int i = 0; i < rectangle.size(); i++) {
+        std::string line = rectangle[i];
+        bool horizontalLineStarted = false;
+        int horizontalLineLength = 0;
+        
+        for (int j = 0; j < line.size(); j++) {
+            if (line[j] == '-') {
+                if (!horizontalLineStarted) {
+                    horizontalLineStarted = true;
+                    horizontalLineLength = 1;
+                } else {
+                    horizontalLineLength++;
+                }
+            } else {
+                if (horizontalLineStarted && horizontalLineLength >= 2) {
+                    count++;
+                }
+                horizontalLineStarted = false;
+                horizontalLineLength = 0;
+            }
+        }
+        
+        if (horizontalLineStarted && horizontalLineLength >= 2) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+int main() {
+    int n, m;
+    std::cin >> n >> m;
+    
+    std::vector<std::string> rectangle(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> rectangle[i];
+    }
+    
+    int result = countHorizontalLines(rectangle);
+    std::cout << result << std::endl;
+    
+    return 0;
+}
