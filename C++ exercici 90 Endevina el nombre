@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int CalculateMaxAttempts(int n) {
+    return log2(n) + 1;
+}
+
+int main() {
+    int n;
+    while (cin >> n) {
+        int maxAttempts = CalculateMaxAttempts(n);
+        cout << maxAttempts << endl;
+    }
+
+    return 0;
+}
