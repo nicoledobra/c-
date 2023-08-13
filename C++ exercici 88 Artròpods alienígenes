@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int capX, potaX, capY, potaY, gorres, mitjons;
+
+    while (cin >> capX >> potaX >> capY >> potaY >> gorres >> mitjons) {
+        int x, y;
+
+        x = gorres-y;
+        y = (mitjons - potesX * x) / potesY;
+
+        cout << x << " " << y << endl;
+    }
+
+    return 0;
+}
