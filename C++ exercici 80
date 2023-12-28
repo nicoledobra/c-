@@ -1,0 +1,39 @@
+ENUNCIAT:
+Utilitza la recursivitat per dissenyar una funció que calculi el factorial d'un nombre donat n.
+Tot seguit, dissenya un programa que llegeixi un nombre enter del teclat i mostri per pantalla el seu factorial.
+
+EXEMPLES:
+Exemple d'Entrada 1
+1
+
+Exemple de Sortida 1
+1
+
+Exemple d'Entrada 2
+4
+
+Exemple de Sortida 2
+24
+
+Exemple d'Entrada 3
+5
+
+Exemple de Sortida 3
+120
+
+CODE:
+#include <iostream>
+using namespace std;
+int factorial(int n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+int main(){
+  int n;
+  cin >> n;
+  cout << factorial(n) << endl;
+  return 0;
+}
