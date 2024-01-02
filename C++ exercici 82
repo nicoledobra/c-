@@ -1,0 +1,52 @@
+ENUNCIAT:
+El resultat de la divisió és separar grups d'objectes en diversos grups menors iguals. 
+El grup inicial s'anomena dividend. La quantitat de grups a separar s'anomena divisor. 
+La quantitat d'objectes a cada grup s'anomena quocient.
+El resultat de la divisió es pot obtenir per mitjà de restes repetides. 
+Si estem separant 24 objectes en 4 grups iguals, veuríem que podríem realitzar 6 restes repetides:
+24 - 4 //primera resta
+20 - 4 //segona resta
+16 - 4 //tercera resta
+12 - 4 //quarta resta
+8 - 4 //cinquena resta
+4 - 4//sisena resta
+0 - 4//no continuem restant
+Ens mantindrem restant mentre el primer valor sigui més gran que el segon.
+Si comptem el nombre de divisions, obtenim el quocient de la divisió.
+Dissenya una funció division que, donats dos nombres enters a i b, 
+retorni el quocient de la divisió del primer nombre entre el segon mitjançant el sistema
+de restes repetides. Aquesta funció ha de ser recursiva. Tot seguit dissenya un programa que 
+llegeixi dos nombres i faci ús de la funció divisió per mostrar per pantalla el resultat de la
+divisió del primer nombres entre el segon.
+
+EXEMPLES:
+Exemple d'entrada 1
+20 100
+Exemple de Sortida 1
+0
+Exemple d'entrada 2
+100 20
+Exemple de Sortida 2
+5
+
+CODE:
+#include <iostream>
+
+using namespace std;
+
+int divisio(int a, int b) {
+  if (a < b) {
+    return 0;
+  } else {
+    return 1 + divisio(a - b, b);
+  }
+}
+
+int main() {
+  int a, b;
+  cin >> a;
+  cin >> b;
+  int quocient = divisio(a, b);
+  cout << quocient << endl;
+  return 0;
+}
