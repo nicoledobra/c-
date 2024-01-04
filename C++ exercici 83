@@ -1,0 +1,48 @@
+ENUNCIAT:
+Dissenyeu una funció de nom sum que, donat un punter a enter que apunta a la primera posició d'un array de nombres 
+enters i un enter n amb la longitud de l'array donat, retorni la suma de tots els seus valors mitjançant una funció recursiva.
+
+Tot seguit dissenya un programa que llegeixi un nombre enter n, que representa el nombre de valors que es llegiran a continuació i,
+tot seguit llegeixi n valors que cal emmagatzemar en un array. Finalment, mostra per pantalla el resultat de la suma de tots els valors de l'array.
+
+EXEMPLES:
+Exemple d'Entrada 1
+0
+
+Exemple de Sortida 1
+0
+
+Exemple d'Entrada 2
+4
+1 2 3 4
+
+Exemple de Sortida 2
+10
+
+CODE:
+#include <iostream>
+
+using namespace std;
+
+int sum(int *array, int n) {
+  if (n == 0) {
+    return 0;
+  } else {
+    return array[n - 1] + sum(array, n - 1);
+  }
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  int array[n];
+  for (int i = 0; i < n; i++) {
+    cin >> array[i];
+  }
+
+  int suma = sum(array, n);
+  cout << suma << endl;
+
+  return 0;
+}
