@@ -1,0 +1,22 @@
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int caps_x, potes_x, caps_y, potes_y, gorres, mitjons;
+
+    while (cin >> caps_x >> potes_x >> caps_y >> potes_y >> gorres >> mitjons) {
+        // Solución del sistema de ecuaciones mediante eliminación gaussiana
+        int det = caps_x * potes_y - caps_y * potes_x;
+        int insectes_x = (gorres * potes_y - mitjons * caps_y) / det;
+        int insectes_y = (mitjons * caps_x - gorres * potes_x) / det;
+
+        cout << insectes_x << " " << insectes_y << endl;
+    }
+
+    return 0;
+}
