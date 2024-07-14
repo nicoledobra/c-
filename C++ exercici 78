@@ -1,0 +1,87 @@
+Donat un cer valor x aixi com uns quants numeros diferents entre si heu de calcular quants dels numeros donats es pden sumar amb 2 altres, de manera que el resultat d'aquesta suma no sigui major de v.
+Podeu suposar que com a minim hi ha 3 numeros.
+Per ex. si v = 15, i els numeros donats son 12, 2, 5, 14 i 1, nomes hi ha un numero, el 14 que no es pugi sumar am 2 numeros mes sense excedir 15. Tots els altres numeros si que poden.
+Entrada
+Consisteix en una linia amb un enter v, seguida d'una linia amb un numero n entre 3 i 10000, seguida d-una linia mab n numeros diferents.
+
+Sortida 
+Escriure una linia amb la quantitat de numeros donats que es poden sumar amb 2 numeros dontas mes de manera que el resultat no sigui major de v.
+
+Ex. d'entrada 1:
+15
+5
+12 2 5 14 1 
+Sortida 1
+4
+
+Entrada 2
+-20
+6
+25 15 5 -5 -15 -25
+
+Sortdia 2
+5
+
+code:
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int count_valid_numbers(int v, std::vector<int>& nums) {
+    std::sort(nums.begin(), nums.end()); // Ordenar els números
+    int n = nums.size();
+    int count = 0;
+
+    // Per a cada número, comprova si es pot sumar amb dos altres nombres diferents
+    for (int i = 0; i < n; ++i) {
+        int left = 0;
+        int right = n - 1;
+        bool found = false;
+
+        while (left < right) {
+            // Evita utilitzar el mateix element dues vegades
+            if (left == i) {
+                ++left;
+                continue;
+            }
+            if (right == i) {
+                --right;
+                continue;
+            }
+
+            // Comprova si la suma de nums[i], nums[left] i nums[right] és menor o igual a v
+            int sum = nums[i] + nums[left] + nums[right];
+            if (sum <= v) {
+                found = true;
+                break;
+            } else if (sum > v) {
+                --right;
+            } else {
+                ++left;
+            }
+        }
+
+        if (found) {
+            ++count;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    int v, n;
+    std::cin >> v;
+    std::cin >> n;
+
+    std::vector<int> nums(n);
+    for (int i = 0; i < n; ++i) {
+        std::cin >> nums[i];
+    }
+
+    int result = count_valid_numbers(v, nums);
+    std::cout << result << std::endl;
+
+    return 0;
+}
